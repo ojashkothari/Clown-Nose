@@ -36,13 +36,15 @@ function modelLoaded()
     console.log("modelLoaded");
 }
 
-function gotPoses()
+function gotPoses(results)
 {
+    //alert("result = " + results);
     if(results.length >0)
     {
         console.log(results);
         noseX =  results[0].pose.nose.x -15;
         noseY =  results[0].pose.nose.y -15;
+
         console.log("nose x = " + results[0].pose.nose.x);
         console.log("nose y = " + results[0].pose.nose.y);
     }
